@@ -6,6 +6,7 @@ let buttons,
     clickedButton = "",
     validInput = false;
 
+// Really like this - super extra credit. I didn't localize mine properly. JMG
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -16,10 +17,12 @@ function initialize() {
     buttons = document.getElementsByClassName('btn');
     //* Add all event listeners
     document.getElementById('bill-amount2').addEventListener('input', handleAmountChange, false);
+    // super nice. I might have used a buttons.forEach(btn => btn.addEventListener('click', handleButtonClick)) -- JMG
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', handleButtonClick);
     };
     //Retrieve preferred tip from web stoarge on application start
+    // EXTRA CREDIT !
     if (clickedButton === "" && localStorage.tip !== undefined) {
         clickedButton = localStorage.tip;
         handleButtonActivation(clickedButton);
@@ -27,6 +30,7 @@ function initialize() {
 }
 
 function handleButtonClick(evt) {
+    // Ha! Naming things is hard. ;) -- JMG
     handleButtonActivation(this.id);
     //update web storage
     localStorage.tip = this.id;
@@ -36,7 +40,7 @@ function handleButtonClick(evt) {
 
 function handleAmountChange(evt) {
     validateInput(document.getElementById('bill-amount2').value);
-    if ((clickedButton === "" && localStorage.tip == undefined)) {
+    if ((clickedButton === "" && localStorage.tip === undefined)) {
         //show error for missing tip selection
         document.getElementById('tipComment').classList.add('error');
         document.getElementById('tipComment').classList.remove('hidden');
@@ -56,6 +60,7 @@ function processTip(tipButton) {
         // if (tipButton === undefined && localStorage.tip !== undefined) {
         //     tipButton === localStorage.tip
         // }
+        // Petty, but maybe a switch here would have been cleaner? I have an allergy to nested if/else if. JMG
         if (tipButton === '10Button') {
             tip = 10;
         }
@@ -67,6 +72,7 @@ function processTip(tipButton) {
         }
         else (tip === 0)
             ;
+            // DANG! Destructuring! NICE! -- JMG
         const [tipAmount, totalAmount] = calculateTip(billAmount, tip);
         //handleButtonActivation(tipButton);
         document.getElementById('calculatedCard1').classList.remove('hidden');
@@ -117,4 +123,15 @@ function calculateTip(billAmount, tipPercent) {
 }
 
 ready(initialize);
+
+/*
+Some notes.
+
+First off, fantastic. Really nicely done. I hope you enjoyed it.
+The only thing I would add, other than the little comments above, is maybe put some of these functions in other files and import them in here.
+It makes the dependencies clearer. But A++ work.
+
+
+
+*/
 
