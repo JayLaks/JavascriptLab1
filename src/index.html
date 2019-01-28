@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webpack Showcase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    
+        <div class="page-header">
+            <h1>Tip Calculator </h1>
+        </div>
+        <div>
+
+        </div>
+        <div class="form-group">
+        <div class="card" style="width: 25rem;">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="bill-amount1">$</span>
+                </div>
+                <input type="text" id="bill-amount2" class="form-control" aria-label="Bill" placeholder="Enter Bill Amount...">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="btn-group" id="btn-group1" role="group" aria-label="Tip Percentage">
+            <button type="button" id="10Button" class="btn btn-secondary">10%</button>
+            <button type="button" id="15Button" class="btn btn-secondary">15%</button>
+            <button type="button" id="20Button" class="btn btn-secondary">20%</button>
+        </div>
+    </div>
+        <div class="form-group">
+        <div>
+            <p class="comment-display" id=tipComment> </p>
+        </div>
+        </div>
+        <div class="card calculatedCard hidden" style="width: 25rem;" id="calculatedCard1">
+            <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+                <ul class="list-group" py-2 style="height:100px;">
+                    <li class="list-group-item" id="billAmount"> Bill Amount: </li>
+                    <li class="list-group-item" id="tipPercent">Tip Percentage:</li>
+                    <li class="list-group-item" id="tipAmount">Amount of Tip:</li>
+                    <li class="list-group-item" id="totalAmount">Total to be Paid:</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

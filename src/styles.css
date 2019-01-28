@@ -1,0 +1,64 @@
+
+h2 {
+    color: gray;
+}
+
+
+h1 {
+  font-weight: 3000;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', "sans-serif";
+    margin-left: 2em;
+  
+}
+
+  /* .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  } */
+  
+  /* .btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  } */
+  
+  /* .btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  } */  
+  .btn.btn-dark.disabled {
+    background-color: gray;    
+  }  
+
+  .comment-display.error{
+    color: red;
+  }
+  .comment-display.hidden{
+    display:none;
+  }
+  /*.btn.btn-primary.enabled { background-color: black;}*/
+
+  .btn.btn-dark.enabled { background-color: black;}
+
+  /* .btn-primary:active, .btn-primary.active,
+  .show > .btn-primary.dropdown-toggle {
+    background-color: gray;
+    background-image: none;
+    border-color: gray;
+  } */
+
+  .calculatedCard.hidden{
+    display:none;
+     }
+
+    .form-control.error{
+      border-color: red;
+    }
+
+    #totalAmount {
+      font-style: italic;
+  }
+    
